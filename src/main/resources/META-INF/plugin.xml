@@ -1,0 +1,40 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>ru.alexgon.markdown-link-plugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Markdown-link</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="alexgon10562@gmail.com" >alexgon</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>Markdown link plugin for autorefactoring copied code as markdown link </description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="CopyAsMdHeaderEng" class="ru.alexgon.markdownlinkplugin.action.CopyAsMdEngLinkAction"
+                text="Copy as Markdown eng link" description="Copies selected text as markdown link with english converting">
+            <add-to-group group-id="Copy.Paste.Special" anchor="last"/>
+        </action>
+    </actions>
+    <actions>
+        <action id="CopyAsMdHeader" class="ru.alexgon.markdownlinkplugin.action.CopyAsMdLinkAction"
+                text="Copy as Markdown link" description="Copies selected text as markdown link">
+            <add-to-group group-id="Copy.Paste.Special" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
