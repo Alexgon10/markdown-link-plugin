@@ -4,8 +4,10 @@ import java.text.Normalizer;
 
 public class StringConverterUtils {
 
+    public static final String PREFIX_CHAR = "-";
+
     private static final String ENG_PATTERN = "[^a-zA-Z0-9\\s-]";
-    private static final String RUS_PATTERN = "[^а-яЁА-ЯЁa-zA-Z0-9\\s-]";
+    private static final String RUS_PATTERN = "[^а-яёйА-ЯЁЙa-zA-Z0-9\\s-]";
 
     public static String convertToMdEngLink(String text) {
         return commonConverting(

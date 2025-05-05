@@ -25,19 +25,44 @@
 
     </extensions>
 
-
     <actions>
         <group id="MarkdownUtils.Group" text="Markdown Tools" popup="true">
-            <action id="CopyAsMdHeaderEng" class="com.alexgon.markdown_link_plugin.action.CopyAsMdEngLinkAction"
-                    text="Copy as Markdown eng link" description="Copies selected text as markdown link with english
-                converting">
-<!--                <add-to-group group-id="MarkdownUtils.Group" anchor="last"/>-->
+            <action id="CopyAsMdHeaderEng"
+                    class="com.alexgon.markdown_link_plugin.action.copy.CopyAsMdEngLinkAction"
+                    text="Copy as Markdown Eng Link"
+                    description="Copies selected text as markdown link with english converting">
             </action>
-            <action id="CopyAsMdHeader" class="com.alexgon.markdown_link_plugin.action.CopyAsMdLinkAction"
-                    text="Copy as Markdown link" description="Copies selected text as markdown link">
-<!--                <keyboard-shortcut first-keystroke="ml" keymap="$default"/>-->
-<!--                <add-to-group group-id="MarkdownUtils.Group" anchor="last"/>-->
+
+            <action id="CopyAsMdHeader"
+                    class="com.alexgon.markdown_link_plugin.action.copy.CopyAsMdLinkAction"
+                    text="Copy as Markdown Link"
+                    description="Copies selected text as markdown link">
             </action>
+
+            <action id="Markdown.Link.Generation"
+                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateLinkAction"
+                    text="Generate Link"
+                    description="Link generation with past">
+            </action>
+
+            <action id="Markdown.LinkBody.Generation"
+                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateLinkBodyAction"
+                    text="Generate Link with Body"
+                    description="Link generation with past">
+            </action>
+
+            <action id="Markdown.TransliteratedLink.Generation"
+                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateTransliteratedLinkAction"
+                    text="Generate Transliterated Link"
+                    description="Link generation with past">
+            </action>
+
+            <action id="Markdown.TransliteratedLinkBody.Generation"
+                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateTransliteratedLinkBodyAction"
+                    text="Generate Transliterated Link with Body"
+                    description="Link generation with past">
+            </action>
+
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </group>
 

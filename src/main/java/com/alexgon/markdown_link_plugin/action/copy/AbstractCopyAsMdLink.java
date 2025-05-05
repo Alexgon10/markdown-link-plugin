@@ -1,4 +1,4 @@
-package com.alexgon.markdown_link_plugin.action;
+package com.alexgon.markdown_link_plugin.action.copy;
 
 import com.alexgon.markdown_link_plugin.StringConverter;
 import com.intellij.openapi.actionSystem.AnAction;
