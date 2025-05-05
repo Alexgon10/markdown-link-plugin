@@ -28,37 +28,37 @@
     <actions>
         <group id="MarkdownUtils.Group" text="Markdown Tools" popup="true">
             <action id="CopyAsMdHeaderEng"
-                    class="com.alexgon.markdown_link_plugin.action.copy.CopyAsMdEngLinkAction"
+                    class="com.alexgon.markdown_link_plugin.action.copy.impl.CopyAsMdEngLinkAction"
                     text="Copy as Markdown Eng Link"
                     description="Copies selected text as markdown link with english converting">
             </action>
 
             <action id="CopyAsMdHeader"
-                    class="com.alexgon.markdown_link_plugin.action.copy.CopyAsMdLinkAction"
+                    class="com.alexgon.markdown_link_plugin.action.copy.impl.CopyAsMdLinkAction"
                     text="Copy as Markdown Link"
                     description="Copies selected text as markdown link">
             </action>
 
             <action id="Markdown.Link.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateLinkAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.LinkGeneratorAction"
                     text="Generate Link"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.LinkBody.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateLinkBodyAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.LinkBodyGeneratorAction"
                     text="Generate Link with Body"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.TransliteratedLink.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateTransliteratedLinkAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.TransliteratedLinkGeneratorAction"
                     text="Generate Transliterated Link"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.TransliteratedLinkBody.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generation.GenerateTransliteratedLinkBodyAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.TransliteratedLinkBodyGeneratorAction"
                     text="Generate Transliterated Link with Body"
                     description="Link generation with past">
             </action>
@@ -67,5 +67,13 @@
         </group>
 
     </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>com.alexgon.markdown_link_plugin.action.intention.MarkdownLinkBodyGeneratorIntention</className>
+            <category>Generation</category>
+            <descriptionDirectoryName>intentions/MarkdownLinkGenerator</descriptionDirectoryName>
+        </intentionAction>
+    </extensions>
 
 </idea-plugin>
