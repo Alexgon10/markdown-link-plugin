@@ -1,4 +1,4 @@
-package ru.alexgon.markdownlinkplugin;
+package com.alexgon.markdown_link_plugin;
 
 public interface StringConverter {
 

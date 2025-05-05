@@ -1,12 +1,12 @@
-package ru.alexgon.markdownlinkplugin.action;
+package com.alexgon.markdown_link_plugin.action;
 
+import com.alexgon.markdown_link_plugin.StringConverter;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.ide.CopyPasteManager;
 import org.jetbrains.annotations.NotNull;
-import ru.alexgon.markdownlinkplugin.StringConverter;
 
 import java.awt.datatransfer.StringSelection;
 

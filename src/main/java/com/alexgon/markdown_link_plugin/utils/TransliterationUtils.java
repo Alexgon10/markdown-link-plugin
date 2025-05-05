@@ -1,4 +1,4 @@
-package ru.alexgon.markdownlinkplugin.utils;
+package com.alexgon.markdown_link_plugin.utils;
 
 import java.util.HashMap;
 import java.util.Map;

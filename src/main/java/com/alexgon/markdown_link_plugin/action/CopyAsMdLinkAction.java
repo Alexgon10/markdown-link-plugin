@@ -1,7 +1,7 @@
-package ru.alexgon.markdownlinkplugin.action;
+package com.alexgon.markdown_link_plugin.action;
 
-import ru.alexgon.markdownlinkplugin.StringConverter;
-import ru.alexgon.markdownlinkplugin.utils.StringConverterUtils;
+import com.alexgon.markdown_link_plugin.StringConverter;
+import com.alexgon.markdown_link_plugin.utils.StringConverterUtils;
 
 public class CopyAsMdLinkAction extends AbstractCopyAsMdLink {
 

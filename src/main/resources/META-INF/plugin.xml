@@ -8,12 +8,12 @@
     <name>Markdown-link</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="alexgon10562@gmail.com" >alexgon</vendor>
+    <vendor email="alexgon10562@gmail.com">alexgon</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description>Markdown link plugin for autorefactoring copied code as markdown link </description>
+    <description>Markdown link plugin for autorefactoring copied code as markdown link</description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -25,16 +25,22 @@
 
     </extensions>
 
+
     <actions>
-        <action id="CopyAsMdHeaderEng" class="ru.alexgon.markdownlinkplugin.action.CopyAsMdEngLinkAction"
-                text="Copy as Markdown eng link" description="Copies selected text as markdown link with english converting">
-            <add-to-group group-id="Copy.Paste.Special" anchor="last"/>
-        </action>
+        <group id="MarkdownUtils.Group" text="Markdown Tools" popup="true">
+            <action id="CopyAsMdHeaderEng" class="com.alexgon.markdown_link_plugin.action.CopyAsMdEngLinkAction"
+                    text="Copy as Markdown eng link" description="Copies selected text as markdown link with english
+                converting">
+<!--                <add-to-group group-id="MarkdownUtils.Group" anchor="last"/>-->
+            </action>
+            <action id="CopyAsMdHeader" class="com.alexgon.markdown_link_plugin.action.CopyAsMdLinkAction"
+                    text="Copy as Markdown link" description="Copies selected text as markdown link">
+<!--                <keyboard-shortcut first-keystroke="ml" keymap="$default"/>-->
+<!--                <add-to-group group-id="MarkdownUtils.Group" anchor="last"/>-->
+            </action>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </group>
+
     </actions>
-    <actions>
-        <action id="CopyAsMdHeader" class="ru.alexgon.markdownlinkplugin.action.CopyAsMdLinkAction"
-                text="Copy as Markdown link" description="Copies selected text as markdown link">
-            <add-to-group group-id="Copy.Paste.Special" anchor="last"/>
-        </action>
-    </actions>
+
 </idea-plugin>

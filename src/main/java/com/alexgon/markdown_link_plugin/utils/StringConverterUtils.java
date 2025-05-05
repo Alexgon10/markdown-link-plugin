@@ -1,8 +1,6 @@
-package ru.alexgon.markdownlinkplugin.utils;
+package com.alexgon.markdown_link_plugin.utils;
 
 import java.text.Normalizer;
-
-import static ru.alexgon.markdownlinkplugin.utils.TransliterationUtils.convertToTranslit;
 
 public class StringConverterUtils {
 
@@ -11,7 +9,7 @@ public class StringConverterUtils {
 
     public static String convertToMdEngLink(String text) {
         return commonConverting(
-                convertToTranslit(
+                TransliterationUtils.convertToTranslit(
                         preConverting(text)
                 ));
     }
