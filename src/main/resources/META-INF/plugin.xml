@@ -70,9 +70,15 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <intentionAction>
-            <className>com.alexgon.markdown_link_plugin.action.intention.MarkdownLinkBodyGeneratorIntention</className>
+            <className>com.alexgon.markdown_link_plugin.action.intention.LinkBodyGeneratorIntention</className>
             <category>Generation</category>
-            <descriptionDirectoryName>intentions/MarkdownLinkGenerator</descriptionDirectoryName>
+            <descriptionDirectoryName>intentions/LinkBodyGenerator</descriptionDirectoryName>
+        </intentionAction>
+
+        <intentionAction>
+            <className>com.alexgon.markdown_link_plugin.action.intention.TransliteratedLinkBodyGeneratorIntention</className>
+            <category>Generation</category>
+            <descriptionDirectoryName>intentions/TransliteratedLinkBodyGeneratorIntention</descriptionDirectoryName>
         </intentionAction>
     </extensions>
 

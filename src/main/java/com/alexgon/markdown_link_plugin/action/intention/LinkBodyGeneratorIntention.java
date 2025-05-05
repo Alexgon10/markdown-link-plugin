@@ -1,9 +1,9 @@
 package com.alexgon.markdown_link_plugin.action.intention;
 
+import com.alexgon.markdown_link_plugin.services.generator.BaseLinkGenerator;
+import com.alexgon.markdown_link_plugin.services.generator.LinkBodyGenerator;
 import com.alexgon.markdown_link_plugin.services.generator.TransliteratedLinkBodyGenerator;
 import com.intellij.codeInsight.intention.IntentionAction;
-import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.application.ModalityState;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
@@ -11,18 +11,18 @@ import com.intellij.psi.PsiFile;
 import com.intellij.util.IncorrectOperationException;
 import org.jetbrains.annotations.NotNull;
 
-public class MarkdownLinkBodyGeneratorIntention implements IntentionAction {
+public class LinkBodyGeneratorIntention implements IntentionAction {
 
-    TransliteratedLinkBodyGenerator transliteratedLinkBodyGenerator = new TransliteratedLinkBodyGenerator();
+    BaseLinkGenerator linkBodyGenerator = new LinkBodyGenerator();
 
     @Override
     public @NotNull String getText() {
-        return "Generate markdown link with body";
+        return "Generate markdown link";
     }
 
     @Override
     public @NotNull String getFamilyName() {
-        return "MarkdownLinkGenerator";
+        return "LinkBodyGenerator";
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MarkdownLinkBodyGeneratorIntention implements IntentionAction {
     @Override
     public void invoke(@NotNull Project project, @NotNull Editor editor, @NotNull PsiFile file) throws IncorrectOperationException {
         try {
-            transliteratedLinkBodyGenerator.generateLink(editor, project);
+            linkBodyGenerator.generateLink(editor, project);
         } catch (Exception e) {
             Logger.getInstance(getClass()).error(e);
         }
