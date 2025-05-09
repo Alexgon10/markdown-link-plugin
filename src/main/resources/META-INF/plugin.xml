@@ -63,6 +63,12 @@
                     description="Link generation with past">
             </action>
 
+            <action id="Markdown.BidirectionalLinkBody.Generation"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.BidirectionalLinkBodyGeneratorAction"
+                    text="Generate Transliterated Link with Body"
+                    description="Link generation with past">
+            </action>
+
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </group>
 
@@ -78,7 +84,13 @@
         <intentionAction>
             <className>com.alexgon.markdown_link_plugin.action.intention.TransliteratedLinkBodyGeneratorIntention</className>
             <category>Generation</category>
-            <descriptionDirectoryName>intentions/TransliteratedLinkBodyGeneratorIntention</descriptionDirectoryName>
+            <descriptionDirectoryName>intentions/TransliteratedLinkBodyGenerator</descriptionDirectoryName>
+        </intentionAction>
+
+        <intentionAction>
+            <className>com.alexgon.markdown_link_plugin.action.intention.BidirectionalLinkBodyGeneratorIntention</className>
+            <category>Generation</category>
+            <descriptionDirectoryName>intentions/BidirectionalLinkBodyGenerator</descriptionDirectoryName>
         </intentionAction>
     </extensions>
 
