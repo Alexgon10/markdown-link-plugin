@@ -40,31 +40,31 @@
             </action>
 
             <action id="Markdown.Link.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generator.impl.LinkGeneratorAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.LinkAction"
                     text="Generate Link"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.LinkBody.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generator.impl.LinkBodyGeneratorAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.LinkBodyAction"
                     text="Generate Link with Body"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.TransliteratedLink.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generator.impl.TransliteratedLinkGeneratorAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.TransliteratedLinkAction"
                     text="Generate Transliterated Link"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.TransliteratedLinkBody.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generator.impl.TransliteratedLinkBodyGeneratorAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.TransliteratedLinkBodyAction"
                     text="Generate Transliterated Link with Body"
                     description="Link generation with past">
             </action>
 
             <action id="Markdown.BidirectionalLinkBody.Generation"
-                    class="com.alexgon.markdown_link_plugin.action.generator.impl.BidirectionalLinkBodyGeneratorAction"
+                    class="com.alexgon.markdown_link_plugin.action.generator.impl.BidirectionalLinkBodyAction"
                     text="Generate Transliterated Link with Body"
                     description="Link generation with past">
             </action>
@@ -76,21 +76,27 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <intentionAction>
-            <className>com.alexgon.markdown_link_plugin.action.intention.LinkBodyGeneratorIntention</className>
+            <className>com.alexgon.markdown_link_plugin.action.intention.LinkBodyIntention</className>
             <category>Generation</category>
-            <descriptionDirectoryName>intentions/LinkBodyGenerator</descriptionDirectoryName>
+            <descriptionDirectoryName>intentions/LinkBodyIntention</descriptionDirectoryName>
         </intentionAction>
 
         <intentionAction>
-            <className>com.alexgon.markdown_link_plugin.action.intention.TransliteratedLinkBodyGeneratorIntention</className>
+            <className>com.alexgon.markdown_link_plugin.action.intention.TransliteratedLinkBodyIntention</className>
             <category>Generation</category>
-            <descriptionDirectoryName>intentions/TransliteratedLinkBodyGenerator</descriptionDirectoryName>
+            <descriptionDirectoryName>intentions/TransliteratedLinkBodyIntention</descriptionDirectoryName>
         </intentionAction>
 
         <intentionAction>
-            <className>com.alexgon.markdown_link_plugin.action.intention.BidirectionalLinkBodyGeneratorIntention</className>
+            <className>com.alexgon.markdown_link_plugin.action.intention.BidirectionalLinkBodyIntention</className>
             <category>Generation</category>
-            <descriptionDirectoryName>intentions/BidirectionalLinkBodyGenerator</descriptionDirectoryName>
+            <descriptionDirectoryName>intentions/BidirectionalLinkBodyIntention</descriptionDirectoryName>
+        </intentionAction>
+
+        <intentionAction>
+            <className>com.alexgon.markdown_link_plugin.action.intention.BidirectionalTransliteratedLinkBodyIntention</className>
+            <category>Generation</category>
+            <descriptionDirectoryName>intentions/BidirectionalTransliteratedLinkBodyIntention</descriptionDirectoryName>
         </intentionAction>
     </extensions>
 

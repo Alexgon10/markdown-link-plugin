@@ -25,6 +25,7 @@ public interface BaseLinkGenerator {
             document.replaceString(startSelection, endSelection, getMarkdownLinkText(selectedText));
 
             if (withBodyGeneration()) {
+                document.insertString(document.getTextLength(),"\n");
                 document.insertString(document.getTextLength(), getBodyText(selectedText));
             }
 

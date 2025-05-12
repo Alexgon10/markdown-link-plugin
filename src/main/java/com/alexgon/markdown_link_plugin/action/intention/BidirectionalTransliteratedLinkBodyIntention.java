@@ -1,8 +1,7 @@
 package com.alexgon.markdown_link_plugin.action.intention;
 
 import com.alexgon.markdown_link_plugin.services.generator.BaseLinkGenerator;
-import com.alexgon.markdown_link_plugin.services.generator.LinkBodyGenerator;
-import com.alexgon.markdown_link_plugin.services.generator.TransliteratedLinkBodyGenerator;
+import com.alexgon.markdown_link_plugin.services.generator.BidirectionalTransliteratedLinkBodyGenerator;
 import com.intellij.codeInsight.intention.IntentionAction;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.editor.Editor;
@@ -11,18 +10,18 @@ import com.intellij.psi.PsiFile;
 import com.intellij.util.IncorrectOperationException;
 import org.jetbrains.annotations.NotNull;
 
-public class LinkBodyGeneratorIntention implements IntentionAction {
+public class BidirectionalTransliteratedLinkBodyIntention implements IntentionAction {
 
-    BaseLinkGenerator linkBodyGenerator = new LinkBodyGenerator();
+    BaseLinkGenerator bidirectionalLinkBodyGenerator = new BidirectionalTransliteratedLinkBodyGenerator();
 
     @Override
     public @NotNull String getText() {
-        return "Generate markdown link";
+        return "Generate bidirectional md link(transliterated)";
     }
 
     @Override
     public @NotNull String getFamilyName() {
-        return "LinkBodyGenerator";
+        return "BidirectionalTransliteratedLinkBodyIntention";
     }
 
     @Override
@@ -37,9 +36,10 @@ public class LinkBodyGeneratorIntention implements IntentionAction {
     }
 
     @Override
-    public void invoke(@NotNull Project project, @NotNull Editor editor, @NotNull PsiFile file) throws IncorrectOperationException {
+    public void invoke(@NotNull Project project, @NotNull Editor editor, @NotNull PsiFile file)
+            throws IncorrectOperationException {
         try {
-            linkBodyGenerator.generateLink(editor, project);
+            bidirectionalLinkBodyGenerator.generateLink(editor, project);
         } catch (Exception e) {
             Logger.getInstance(getClass()).error(e);
         }

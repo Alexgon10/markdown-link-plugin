@@ -9,7 +9,7 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class AbstractLinkGeneratorAction extends AnAction {
+public abstract class AbstractLinkAction extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {

@@ -26,8 +26,9 @@ public class StringConverterUtils {
         if (text == null || text.isEmpty()) {
             return "";
         }
+        return text;
 
-        return Normalizer.normalize(text, Normalizer.Form.NFD);
+//        return Normalizer.normalize(text, Normalizer.Form.NFD);
     }
 
 
